@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flowlab | Circle</title>
+  <link rel="icon" href="icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Doujin circle Flowlab portfolio" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="index.html">
+        <img src="icon.png" alt="Flowlab logo" />
+        <span>Flowlab</span>
+      </a>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Top</a>
+        <a href="works.html">Works</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="highlight">Doujin circle Flowlab</div>
+        <h1>We make VR better&mdash;one small improvement<br />at a time.</h1>
+        <p>We are a small crew of passionate VR enthusiasts, building hardware and software to push comfort, immersion, and playfulness.</p>
+        <div class="hero-actions">
+          <a class="btn" href="works.html">View works</a>
+          <a class="ghost" href="#links">Archives</a>
+          <a class="ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="slideshow">
+          <img src="pics/FsTuk93aQAAH_f9.jpg" alt="Flowlab VR project photo" id="slideshow-image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <h2>Find our archives</h2>
+      <p class="lead">VR gear notes, assets, and releases lived here. Feel free to browse while we stay quiet.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>BOOTH</h3>
+          <p><a href="https://ugokutennp.booth.pm/">https://ugokutennp.booth.pm/</a></p>
+        </div>
+        <div class="card">
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/ugokutennp">https://github.com/ugokutennp</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="lead">We have been mostly quiet lately, but if you had VR hardware or software questions, or just wanted to say hi, feel free to ping us. Replies might be slow.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Twitter</h3>
+          <p><a href="https://twitter.com/ugokutennp">@ugokutennp (feather) - DM</a></p>
+        </div>
+        <div class="card">
+          <h3>Discord</h3>
+          <p>@ugokutennp</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Flowlab
+    </div>
+  </footer>
+
+  <script>
+    const slideImages = [
+      'pics/FsTuk93aQAAH_f9.jpg',
+      'pics/GBiBQf_a0AAi59V.jpg',
+      'pics/GCfwRsCaUAAgG2a.jpg',
+      'pics/GH0voGtaQAAStjI.jpg',
+      'pics/GMKhCc-bEAAE9a7.jpg',
+      'pics/GqpALc5aAAALsB1.jpg'
+    ];
+    const slideEl = document.getElementById('slideshow-image');
+    let slideIndex = 0;
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % slideImages.length;
+      slideEl.style.opacity = 0;
+      setTimeout(() => {
+        slideEl.src = slideImages[slideIndex];
+        slideEl.style.opacity = 1;
+      }, 200);
+    }
+    setInterval(nextSlide, 6000);
+  </script>
+</body>
+</html>
